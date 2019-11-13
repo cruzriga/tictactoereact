@@ -20,11 +20,9 @@ function App() {
   useEffect(()=>{
       let winner = false;
       if (restante < 6) {
-           let d1 = 0; let d2 = 0;
+           let d1 , d2 = 0;
           for (let i = 0; i < 3; i++) {
-
-              let x = 0; let y = 0;
-
+              let x,y = 0;
               for (let k = 0; k < 3; k++) {
                   x = (table[i][k] === turno) ? x + 1 : x;
                   y = (table[k][i] === turno) ? y + 1 : y;
