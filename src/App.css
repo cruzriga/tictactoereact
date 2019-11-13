@@ -6,6 +6,7 @@
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+  display: none;
 }
 
 .App-header {
@@ -14,7 +15,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -31,3 +31,99 @@
     transform: rotate(360deg);
   }
 }
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.panel{
+  width: 30vw;
+  background: rgb(0,0,0, 0.2);
+  margin: 0 5vw 0 5vw;
+  height: 50vw;
+  text-align: left;
+  padding: calc(10px + 2vmin);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.p_r{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  margin: 3vw 0 3vw;
+}
+
+.btn {
+  background-color: #191c21;
+  color:#61dafb;
+  border: 0.3vw solid black;
+  text-align: center;
+  width: 100%;
+  padding: 1vw;
+}
+
+.p_r .r{
+  text-align: center;
+  background: white;
+  color: black;
+  font-weight: 800;
+  font-size: calc(30px + 2vmin);
+  padding: 1vw;
+}
+.mensaje{
+  color:black;
+  background: white;
+  text-align: center;
+  font-weight: 800;
+  height: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.msg-body{
+  font-size: calc(50px + 2vmin);
+}
+
+.container {
+    margin: 0;
+}
+
+.container table{
+  border: 0;
+  border-collapse: collapse !important;
+
+}
+
+.container table tr{
+  border: 0;
+}
+
+
+.container table td{
+    width: calc(50vw / 3);
+    height: calc(50vw / 3);
+    line-height: 0px;
+    font-size: 6vw;
+    padding: 0;
+}
+
+.container table td:hover{
+  background: rgb(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.container table .c1{
+  border-left: 0.5vw white solid;
+  border-right: 0.5vw white solid;
+}
+
+.container table .r1 .c1, .container table .r1 .c0, .container table .r1 .c2{
+  border-top: 0.5vw white solid;
+  border-bottom: 0.5vw white solid;
+}
+
