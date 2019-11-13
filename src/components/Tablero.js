@@ -1,16 +1,16 @@
 import React from 'react';
 
-function Tablero({turno,setTurno, setTable, table}){
-
+function Tablero({turno,setRestante, setTable, table, linea}){
     const handleClick = (r,c) =>{
-        let _table = table;
-        if(_table[r][c] === ""){
-          _table[r][c]=turno
-          setTable(table)
-          setTurno(_turno =>((_turno === "X") ? "0" : "X"));
+        if(linea === ""){
+            let _table = table;
+            if(_table[r][c] === ""){
+              _table[r][c]=turno;
+                setTable(table);
+                setRestante(_restante =>((_restante === true) ? 9 : _restante - 1));
+            }
         }
-      }
-
+      };
 
     function Tr({r}){
         return(
@@ -22,13 +22,16 @@ function Tablero({turno,setTurno, setTable, table}){
       )
     }
 
-    return( <table>
-                <tbody>
-                    <Tr r={0}/>
-                    <Tr r={1}/>
-                    <Tr r={2}/>
-                </tbody>
-            </table>
+    return( <div style={{position:"relative"}}>
+                { (linea) ? <div className={`line ${linea}`} ></div> : '' }
+                    <table>
+                    <tbody>
+                        <Tr r={0}/>
+                        <Tr r={1}/>
+                        <Tr r={2}/>
+                    </tbody>
+                </table>
+            </div>
     );
 }
 
